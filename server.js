@@ -24,8 +24,8 @@ fs.readFile('./public/index.html', (err, data) => {
   }
 
   const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end(JSON.stringify({ data }));
+    res.writeHead(200, { 'Content-Type': `text/html` });
+    res.end(data);
   });
 
   server.listen(port);
